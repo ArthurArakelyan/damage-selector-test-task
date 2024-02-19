@@ -25,8 +25,9 @@ const DamageSelector = () => {
       <div className={styles['damage-selector__positions']}>
         <DamageSelectorPositions />
 
+        {/* Loading image from an independent resource, to make sure that the plugin will work with any website without need of a local image file to be used with plugin files */}
         <img
-          src="./car.png"
+          src="https://damage-selector-test-task.vercel.app/car.png"
           alt="Car"
           width={463}
           height={202}
