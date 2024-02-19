@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Damage Selector Test Task</title>
+    <style>
+      html, body {
+        font-family: Arial, 'sans-serif';
+        margin: 0;
+      }
+      *, *::after, *::before {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        window.DAMAGE_SELECTOR_API && window.DAMAGE_SELECTOR_API.init({
+          selector: '#root',
+          options: {
+            initializedOptions: ['B5'],
+            onPositionChange(positions) {
+              console.log('onPositionChange', positions);
+            },
+            onComplete(positions) {
+              console.log('onComplete', positions);
+            },
+            onInit() {
+              console.log('onInit');
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+.damage-selector-position {
+  position: absolute;
+  border: 0.188rem solid #343a40;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: background-color .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+.damage-selector-position:focus-visible {
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.75);
+}
+.damage-selector-position:disabled {
+  opacity: 0.8;
+  cursor: default;
+}
+
+.damage-selector-position--vertical-top {
+  top: 0.5rem;
+}
+.damage-selector-position--vertical-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.damage-selector-position--vertical-bottom {
+  bottom: 0.5rem;
+}
+
+.damage-selector-position--active {
+  background-color: #ff6f42;
+}
+
+@media (max-width: 768px) {
+  .damage-selector-position {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-width: 0.125rem;
+  }
+}
